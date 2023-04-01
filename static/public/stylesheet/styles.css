@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F2F2F2;
+  color: #333333;
+}
+
+header {
+  background-color: #006699;
+  height: 40px;
+  width: 40px;
+  margin-left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  margin-left: 20px;
+  color: #FFFFFF;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin-right: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  font-size: 16px;
+}
+
+button[type=submit] {
+  background-color: #0099CC;
+  border: none;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #006699;
+}
+
+.tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.tile {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.15);
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tile img {
+  max-width: 60px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.tile h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.tile p {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  button[type=submit] {
+    border-radius: 5px;
+  }
+
+  .tiles-container {
+    flex-direction: column;
+  }
+
+  .tile {
+    margin: 20px 0;
+  }
+}
+
+.class-logo{
+  display: flex;
+  height: 160px;
+  width: 160px;
+  margin: auto;
+}

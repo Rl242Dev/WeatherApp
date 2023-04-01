@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='public/stylesheet/styles.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='public/img/logo.png') }}">
+</head>
+<body>
+  <div class="header">
+    <img class="class-logo" src="{{ url_for('static', filename='public/img/logo.png') }}" alt="Weather App Logo">
+  </div>
+
+  <div class="search-container">
+    <form action="{{ url_for('index') }}" method="post">
+      <input type="text" placeholder="Enter City Name" name="city-input" required>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="tiles-container">
+    <div class="tile">
+      <img src="{{ url_for('static', filename='public/img/temperature.png') }}" alt="Temperature Logo">
+      <h2>Temperature</h2>
+      <p id="temperature">{{ temperature }}</p>
+    </div>
+
+    <div class="tile">
+      <img src="{{ url_for('static', filename='public/img/wind.png') }}" alt="Wind Logo">
+      <h2>Wind Speed</h2>
+      <p id="wind">{{ wind_speed }}</p>
+    </div>
+
+    <div class="tile">
+      <img src="{{ url_for('static', filename='public/img/humidity.png') }}" alt="Humidity Logo">
+      <h2>Humidity</h2>
+      <p id="humidity">{{ humidity }}</p>
+    </div>
+
+    <div class="tile">
+      <img src="{{ url_for('static', filename='public/img/visibility.png') }}" alt="Visibility Logo">
+      <h2>Visibility</h2>
+      <p id="pressure">{{ visibility }}</p>
+    </div>
+  </div>
+  
+</body>
+</html>
